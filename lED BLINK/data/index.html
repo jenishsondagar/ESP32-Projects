@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32 LED Control</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin-top: 100px;
+        }
+
+        button {
+            font-size: 25px;
+            padding: 15px 30px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ESP32 LED Control</h1>
+
+    <button onclick="ledOn()">LED ON</button>
+
+    <button onclick="ledOff()">LED OFF</button>
+
+    <script>
+
+        function ledOn() {
+            fetch("/on");
+        }
+
+        function ledOff() {
+            fetch("/off");
+        }
+
+    </script>
+
+</body>
+</html>
